@@ -1,4 +1,4 @@
-# ** CSS Conventions **
+# CSS Conventions
 
 This document will outline the CSS Conventions used for readability and ease  
 of styling for my personal website project
