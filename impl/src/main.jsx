@@ -42,18 +42,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <RouterProvider router={router} />
     </React.StrictMode>
 );
-
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//     <React.StrictMode>
-//         <BrowserRouter>
-//             <Routes>
-//                 <Route path="/" element={<NavBar />}>
-//                 <Route index element={<HomePage />} />
-//                 <Route path="/projects" element={<ProjectsPage />} />
-//                 <Route path="/about" element={<AboutPage />} />
-//                 <Route path="*" element={<NoPage />} />
-//                 </Route>
-//             </Routes>
-//         </BrowserRouter>
-//     </React.StrictMode>,
-// )

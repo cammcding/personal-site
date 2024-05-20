@@ -1,11 +1,13 @@
-
+import AnimatedBlocks from "../components/AnimatedBlocks";
 
 export default function HomePage() {
 
 
     return(
-        <div>
-            HOME PAGE GOES HERE
+        <div className="home-page-container">
+            <div className="home-page-blocks-container" id="blocks">
+                <AnimatedBlocks />
+            </div>
         </div>
     );
 }
