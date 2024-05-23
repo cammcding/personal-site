@@ -1,5 +1,4 @@
 import { forwardRef } from "react";
-// import BlockSVG from "../assets/square-svgrepo-com.svg";
 import svgTL from "../assets/top-left-fun-block.svg";
 import svgTR from "../assets/top-right-fun-block.svg";
 import svgBL from "../assets/bottom-left-fun-block.svg";

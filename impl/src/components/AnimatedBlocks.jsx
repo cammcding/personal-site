@@ -6,12 +6,6 @@ import FunBlock from "./FunBlock";
 
 export default function AnimatedBlocks() {
 
-    
-    // const topLeftScrollRef = useRef(null);
-    // const botLeftScrollRef = useRef(null);
-    // const topRightScrollRef = useRef(null);
-    // const botRightScrollRef = useRef(null);
-
     const MotionFunBlock = motion(FunBlock, { forwardMotionProps: true });
     const [animationTrigger, animate] = useAnimate();
     const { height, width } = useWindowDimensions();
@@ -45,18 +39,11 @@ export default function AnimatedBlocks() {
         }
     }, [isInView]);
 
-    const variants = {
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-    };
-
     return(
-        
         <div 
-        className="home-page-animated-blocks"
-        id="animated-blocks-grid"
-        ref={animationTrigger}
-        >
+            className="home-page-animated-blocks"
+            id="animated-blocks-grid"
+            ref={animationTrigger}>
             <MotionFunBlock 
                 className="home-page-motion-fun-block"
                 pos="top-left"
@@ -71,7 +58,6 @@ export default function AnimatedBlocks() {
                 className="home-page-motion-fun-block" 
                 pos="bottom-right"/>
         </div>
-        
     );
 }
 
