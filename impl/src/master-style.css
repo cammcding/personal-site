@@ -51,8 +51,8 @@ div.home-page-blocks-container {
     align-content: flex-start;
     margin-inline: auto;
     padding: 150px;
-    height: 35%;
-    width: 35%;
+    height: 40vw;
+    width: 40vw;
     position: relative;
 }
 
