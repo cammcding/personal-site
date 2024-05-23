@@ -25,7 +25,7 @@ export default function NavBar() {
                 </ul>
             </nav>
         </div>
-        <div className="global-page-contents-containert">
+        <div className="global-page-contents-container">
             {/*location that the page is rendered*/}
             <Outlet />
         </div>

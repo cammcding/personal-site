@@ -1,12 +1,10 @@
 html, body { 
-    margin: 0;
+    margin: 0px;
     height: 100%;
     width: 100%;
     overflow: auto;
-}
-
-html {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
@@ -15,16 +13,59 @@ body {
 
 /* Setting navbar to fixed size at the top of page*/
 .global-navbar-container {
-    background-color: aqua;
+    background-color: rgb(75, 75, 75);
     height: 80px;
-    top: 0px;
+    top: 0;
     width: 100%;
 }
 
 
-/* TEMP STYLING FOR SVG BLOCKS */
-
-img {
-    height: 100px;
-    width: 100px;
+.home-page-container {
+    
+    height: 200vh;
 }
+
+/* ============ SubSectionName ============ */
+
+/* ============ Colours ============ 
+
+From Canva:
+
+Fun Block Colours
+---------------
+Orange: #FF7300
+Purple: #9D2ADB
+Green: #00A607
+Blue: #103ACD
+---------------
+*/
+
+/* ============ Animated Blocks ============ */
+div.home-page-blocks-container {
+    height: 100vh;
+}
+
+#animated-blocks-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-inline: auto;
+    padding: 150px;
+    height: 35%;
+    width: 35%;
+    position: relative;
+}
+
+#animated-blocks-grid .fun-block {
+    height: 50%;
+    width: 50%;
+    margin: 0px;
+}
+
+.fun-block > img {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+
