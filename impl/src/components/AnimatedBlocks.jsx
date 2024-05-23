@@ -28,20 +28,20 @@ export default function AnimatedBlocks() {
         ["#top-left-block", 
          { y: [0, -height/2], rotate: 180, opacity: 0 }],
         ["#top-right-block", 
-         { x: [0, -width/2], rotate: 180, opacity: 0 }, 
+         { x: [0, width/2], rotate: 180, opacity: 0 }, 
          { at: "<" }],
         ["#bottom-right-block", 
-         { y: [0, height/2], rotate: 180, opacity: 0 },
+         // This one should go a bit further since they will be scrolling down
+         { y: [0, height/1.5], rotate: 180, opacity: 0 },
          { at: "<" }],
         ["#bottom-left-block", 
-         { x: [0, width/2], rotate: 180, opacity: 0 }, 
+         { x: [0, -width/2], rotate: 180, opacity: 0 }, 
          { at: "<" }]
     ];
 
     useEffect(() => {
         if (isInView) {
             animate(forwardAnimations, { duration: 5, type: "spring"});
-                   
         }
     }, [isInView]);
 
