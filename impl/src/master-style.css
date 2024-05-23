@@ -1,3 +1,16 @@
+/* ============ SubSectionName ============ */
+
+/* ============ Constants ============ */
+
+:root {
+    --theme-orange: #FF7300;
+    --theme-purple: #9D2ADB;
+    --theme-green: #00A607;
+    --theme-blue: #103ACD;
+}
+
+/* ============ Basics ============ */
+
 html, body { 
     margin: 0px;
     height: 100%;
@@ -10,6 +23,8 @@ html, body {
 body {
     position: absolute;
 }
+
+/* ============ Navbar ============ */
 
 /* Setting navbar to fixed size at the top of page*/
 .global-navbar-container {
@@ -25,24 +40,8 @@ body {
     height: 200vh;
 }
 
-/* ============ SubSectionName ============ */
-
-/* ============ Colours ============ 
-
-From Canva:
-
-Fun Block Colours
----------------
-Orange: #FF7300
-Purple: #9D2ADB
-Green: #00A607
-Blue: #103ACD
----------------
-*/
-
 /* ============ Animated Blocks ============ */
 div.home-page-blocks-container {
-    height: 100vh;
 }
 
 #animated-blocks-grid {
@@ -69,3 +68,22 @@ div.home-page-blocks-container {
 }
 
 
+/* ============ Home Page Text Content ============ */
+.home-page-title-container {
+    margin-inline: auto;
+    position: relative;
+    height: 200px;
+    width: 75%;
+    text-align: center;
+    border-color: var(--theme-blue);
+}
+
+.home-page-title:nth-child(1) {
+    color: var(--theme-orange)
+}
+.home-page-title:nth-child(2) {
+    color: var(--theme-purple)
+}
+.home-page-title:nth-child(3) {
+    color: var(--theme-green)
+}
