@@ -99,3 +99,24 @@ body {
 .home-page-title#title-fun {
     color: var(--theme-blue)
 }
+
+
+
+
+/* ============ Projects Page Project Card ============ */
+
+.projects-page-preview-container {
+    margin-inline: auto;
+    position: relative;
+    width: 80vw;
+}
+
+.project-card {
+    width: 40%;
+    height: width;
+}
+
+.project-card-img {
+    height: 100%;
+    width: 100%;
+}
