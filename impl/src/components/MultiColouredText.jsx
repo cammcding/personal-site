@@ -10,9 +10,20 @@ import PropTypes from "prop-types";
 
 export default function MultiColouredText(props) {
 
-    const mcText = props.text.map((textSection) =>
-        <span className="general-multi-coloured-text">{textSection}</span>
-    );
+    const mcMapToSpan = (textSection, index) => {
+        if (index > 0) textSection = " " + textSection;
+
+        return(
+            <span 
+                className="general-multi-coloured-text"
+                key={"coloured-section-" + index}>
+                    
+                {textSection}
+            </span>
+        );
+    };
+
+    const mcText = props.text.map(mcMapToSpan);
 
     return(
         <>

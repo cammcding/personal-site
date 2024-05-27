@@ -87,6 +87,11 @@ body {
     border-color: var(--theme-blue);
 }
 
+.home-page-colourize-button {
+    height: 200px;
+    width: 200px;
+}
+
 
 /* ============ Multi-Coloured Text ============ */
 span:nth-child(4n+1).general-multi-coloured-text {
