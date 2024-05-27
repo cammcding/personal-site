@@ -8,8 +8,12 @@ export default function ProjectCard(props) {
 
     return(
         <div className="project-card">
-            <img className="project-card-img" src={props.imgSource}></img>
-            <h2 className="project-card-title">{props.name}</h2>
+            <a className="project-card-open-link" href={props.link}>
+                <h2 className="project-card-title">{props.name}</h2>
+            </a>
+            <a className="project-card-open-link" href={props.link}>
+                <img className="project-card-img" src={props.imgSource}></img>
+            </a>
             <p className="project-card-desc">{props.desc}</p>
             <h3 className="project-card-lang-title">
                 Languages/Tools/Frameworks Used:
@@ -26,6 +30,6 @@ ProjectCard.propTypes = {
     imgSource: PropTypes.string,
     desc: PropTypes.string,
     langs: PropTypes.array,
-    link: PropTypes.array,
+    link: PropTypes.string,
 };
 

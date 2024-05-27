@@ -87,20 +87,20 @@ body {
     border-color: var(--theme-blue);
 }
 
-.home-page-title#title-make {
+
+/* ============ Multi-Coloured Text ============ */
+span:nth-child(4n+1).general-multi-coloured-text {
     color: var(--theme-orange)
 }
-.home-page-title#title-coding {
+span:nth-child(4n+2).general-multi-coloured-text {
     color: var(--theme-purple)
 }
-.home-page-title#title-more {
+span:nth-child(4n+3).general-multi-coloured-text {
     color: var(--theme-green)
 }
-.home-page-title#title-fun {
+span:nth-child(4n+4).general-multi-coloured-text {
     color: var(--theme-blue)
 }
-
-
 
 
 /* ============ Projects Page Project Card ============ */

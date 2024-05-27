@@ -9,7 +9,9 @@ export default function Projects() {
         <ProjectCard 
             name="NFL Combine Data Analysis"
             imgSource={imgSrc}
-            desc=""
+            desc="Historical analysis of the correlation between performance 
+                  in various combine drills and NFL success. Measured accross 
+                  different postions."
             langs={["Python", "SQL"]}
             link="https://github.com/cammcding/nfl-data-analysis-may-2023"/>
         </>

@@ -1,4 +1,5 @@
 import AnimatedBlocks from "../components/AnimatedBlocks";
+import MultiColouredText from "../components/MultiColouredText";
 
 export default function HomePage() {
 
@@ -9,10 +10,7 @@ export default function HomePage() {
                 <AnimatedBlocks />
             </div>
             <div className="home-page-title-container">
-                <span className="home-page-title" id="title-make">MAKE</span>
-                <span className="home-page-title" id="title-coding"> CODING </span>
-                <span className="home-page-title" id="title-more"> MORE </span>
-                <span className="home-page-title" id="title-fun">FUN</span>
+                <MultiColouredText text={["Make", " Coding ", " More ", "Fun"]}/>
             </div>
         </div>
     );
