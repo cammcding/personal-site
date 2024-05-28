@@ -48,10 +48,11 @@ body {
 
 
 .home-page-container {
-    background-color: rgb(213, 245, 255);
+    background-color: rgb(214, 214, 214);
 }
 
 /* ============ Home Page Animated Blocks ============ */
+
 #animated-blocks-grid {
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +79,7 @@ body {
 
 
 /* ============ Home Page Text Content ============ */
+
 .home-page-title-container {
     margin-inline: auto;
     position: relative;
@@ -94,6 +96,7 @@ body {
 
 
 /* ============ Multi-Coloured Text ============ */
+
 span:nth-child(4n+1).general-multi-coloured-text {
     color: var(--theme-orange)
 }
