@@ -1,6 +1,6 @@
-import nflCombineImage from "../assets/NFL_Scouting_Combine_logo.png";
-import htmlCssStockImage from "../assets/html-css-stock-image.png";
-import bbScoreStockImage from "../assets/basketball-scoreboard-stock.png";
+import nflCombineImage from "../assets/NFL_Scouting_Combine_logo.jpg";
+import htmlCssStockImage from "../assets/html-css-stock-image.jpg";
+import bbScoreStockImage from "../assets/basketball-scoreboard-stock.jpg";
 
 import ProjectCard from "./ProjectCard.jsx";
 
