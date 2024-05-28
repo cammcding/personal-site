@@ -39,7 +39,6 @@ export default function HomePage() {
             className="home-page-main-text1" 
             text={mcMainTextContent1}/>
         <br/>
-        <br />
         <MultiColouredText 
             className="home-page-main-text2"
             text={mcMainTextContent2}/>

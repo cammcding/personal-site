@@ -23,12 +23,12 @@ export default function MultiColouredText(props) {
         );
     };
 
-    const mcText = props.text.map(mcMapToSpan);
+    const mcText = props.text?.map(mcMapToSpan);
 
     return(
-        <>
+        <section>
             {mcText}
-        </>
+        </section>
     );
 }
 
