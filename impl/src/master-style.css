@@ -130,7 +130,7 @@ span:nth-child(4n+4).general-multi-coloured-text {
     width: 100%;
 }
 
-/* ============ About Page Container ============ */
+/* ============ About Page ============ */
 
 .about-page-container {
     height: 100vh;
@@ -140,4 +140,37 @@ span:nth-child(4n+4).general-multi-coloured-text {
 
 .about-page-portrait {
     height: 30vh;
+}
+
+/* ============ Error Page ============ */
+
+.error-page-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.error-page-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    height: 30%;
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 8%;
+    background-color: rgb(205, 205, 205);
+
+    /* This centers vertically */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.error-page-content-container > * {
+    width: 100%;
+    text-align: center;
 }
