@@ -45,14 +45,14 @@ export default function HomePage() {
     </>;
 
     const [mainTextToDisplay, setMainTextToDisplay] = useState(mainText);
-    const [colourizeButtonText, setColourizeButtonText] = useState("Colourize!");
+    const [colourizeButtonText, setColourizeButtonText] = useState("Colourize");
     const [isColourized, setColourized] = useState(false);
     
     const changeMainTextColour = () => {
         console.log("colourized: " + isColourized);
         
         if (isColourized) {  // need to revert to normal
-            setColourizeButtonText("Colourize!");
+            setColourizeButtonText("Colourize");
             setMainTextToDisplay(mainText);
         } else {  // Need to colourize
             setColourizeButtonText("Normal :(");
@@ -65,8 +65,15 @@ export default function HomePage() {
 
     return(
         <div className="home-page-container">
+            <div className="home-page-buffer"></div>
             <div className="home-page-blocks-container" id="blocks">
                 <AnimatedBlocks />
+            </div>
+            <div className="home-page-scroll-prompt-arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             <div className="home-page-title-container">
                 <MultiColouredText text={["Make", " Coding ", " More ", "Fun"]}/>
@@ -76,7 +83,9 @@ export default function HomePage() {
                     {mainTextToDisplay}
                 </div>
                 <div className="home-page-colourize-container">
-                    <h2>Not fun enough?</h2>
+                    <h2 className="home-page-colourize-button-label">
+                        Not fun enough?
+                    </h2>
                     <button 
                         className="home-page-colourize-button"
                         onClick={changeMainTextColour}>

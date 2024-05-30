@@ -26,7 +26,7 @@ export default function MultiColouredText(props) {
     const mcText = props.text?.map(mcMapToSpan);
 
     return(
-        <section>
+        <section className="multi-coloured-text-section">
             {mcText}
         </section>
     );

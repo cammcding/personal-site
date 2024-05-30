@@ -1,4 +1,4 @@
-import { motion, useInView, useAnimate } from "framer-motion";
+import { motion, useInView, useAnimate, motionValue } from "framer-motion";
 import { useRef, useEffect } from "react";
 import useWindowDimensions from "../custom-hooks/UseWindowDimension";
 import FunBlock from "./FunBlock";
@@ -7,13 +7,14 @@ import FunBlock from "./FunBlock";
 export default function AnimatedBlocks() {
 
     const MotionFunBlock = motion(FunBlock, { forwardMotionProps: true });
+    const gridBGColour = motionValue("#ffffff");
+    const gridBoxShadow = motionValue("0px 0px 20px 3px white");
     const [animationTrigger, animate] = useAnimate();
     const { height, width } = useWindowDimensions();
-    const viewportWindowHeight = (-(height / 2));
     const isInView = useInView(
         animationTrigger, 
         {
-            margin: "0px 0px -800px 0px",
+            margin: "0px 0px -650px 0px",
             amount: "some",
         }
     );
@@ -30,19 +31,22 @@ export default function AnimatedBlocks() {
          { at: "<" }],
         ["#bottom-left-block", 
          { x: [0, -width/2], rotate: 180, opacity: 0 }, 
-         { at: "<" }]
+         { at: "<" }],
     ];
 
     useEffect(() => {
         if (isInView) {
             animate(forwardAnimations, { duration: 5, type: "spring"});
+            animate(gridBGColour, "transparent", { duration: 3 });
+            animate(gridBoxShadow, "0px 0px 0px 0px white");
         }
     }, [isInView]);
 
     return(
-        <div 
+        <motion.div 
             className="home-page-animated-blocks"
             id="animated-blocks-grid"
+            style={{ backgroundColor: gridBGColour, boxShadow: gridBoxShadow }}
             ref={animationTrigger}>
             <MotionFunBlock 
                 className="home-page-motion-fun-block"
@@ -57,7 +61,7 @@ export default function AnimatedBlocks() {
             <MotionFunBlock 
                 className="home-page-motion-fun-block" 
                 pos="bottom-right"/>
-        </div>
+        </motion.div>
     );
 }
 
