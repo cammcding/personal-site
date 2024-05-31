@@ -21,8 +21,16 @@ export default function HomePage() {
     "conceive. Good Luck!";
 
     // Priming the text content for multi-colour.
-    const mcMainTextContent1 = mainTextContent1.split(" ");
-    const mcMainTextContent2 = mainTextContent2.split(" ");
+    const splitMainTextContent1 = mainTextContent1.split(" ");
+    const splitMainTextContent2 = mainTextContent2.split(" ");
+    const mcMainTextContent1 = splitMainTextContent1.map((word, index) => {
+        if (index > 0) word = " " + word;
+        return word;
+    });
+    const mcMainTextContent2 = splitMainTextContent2.map((word, index) => {
+        if (index > 0) word = " " + word;
+        return word;
+    });
 
     // Normal text HTML element
     const mainText = 

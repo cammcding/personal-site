@@ -9,10 +9,8 @@ Accepts text content as an array of text (each element will alternate in colour)
 import PropTypes from "prop-types";
 
 export default function MultiColouredText(props) {
-
     const mcMapToSpan = (textSection, index) => {
-        if (index > 0) textSection = " " + textSection;
-
+       
         return(
             <span 
                 className="general-multi-coloured-text"
