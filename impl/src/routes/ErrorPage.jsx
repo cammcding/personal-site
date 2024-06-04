@@ -14,7 +14,7 @@ export default function ErrorPage() {
                 <h1 className="error-page-title">Unexpected Error!</h1>
                 <MultiColouredText 
                     className="error-page-multi-coloured-text"
-                    text={["That's", "not", "very", "fun", "..."]}/>
+                    text={["That's ", "not ", "very ", "fun ", "..."]}/>
                 <h2 className="error-page-details-prompt">
                     Here are the details:
                 </h2>
