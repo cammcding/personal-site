@@ -52,18 +52,23 @@ export default function HomePage() {
             text={mcMainTextContent2}/>
     </>;
 
+    const colourizeButtonColourize = 
+        <MultiColouredText 
+            text={["C", "o", "l", "o", "u", "r", "i", "z", "e", "!"]}/>;
+    const colourizeButtonNormal = "Normal :(";
+
     const [mainTextToDisplay, setMainTextToDisplay] = useState(mainText);
-    const [colourizeButtonText, setColourizeButtonText] = useState("Colourize");
+    const [colourizeButtonText, setColourizeButtonText] = useState(colourizeButtonColourize);
     const [isColourized, setColourized] = useState(false);
     
     const changeMainTextColour = () => {
         console.log("colourized: " + isColourized);
         
         if (isColourized) {  // need to revert to normal
-            setColourizeButtonText("Colourize");
+            setColourizeButtonText(colourizeButtonColourize);
             setMainTextToDisplay(mainText);
         } else {  // Need to colourize
-            setColourizeButtonText("Normal :(");
+            setColourizeButtonText(colourizeButtonNormal);
             setMainTextToDisplay(mcMainText);
         }
         
