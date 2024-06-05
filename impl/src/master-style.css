@@ -442,6 +442,7 @@ span:nth-child(4n+4).general-multi-coloured-text {
     width: 90%;
     margin: auto;
     margin-bottom: 10px;
+    justify-content: space-between;
 }
 
 .project-card {
@@ -449,9 +450,7 @@ span:nth-child(4n+4).general-multi-coloured-text {
     height: 450px;
     min-height: fit-content;
     max-height: 600px;
-    margin: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
