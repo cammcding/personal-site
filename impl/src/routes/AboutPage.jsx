@@ -21,30 +21,48 @@ export default function AboutPage() {
     const eml = 'ca' + 'm.' + 'mc' + 'di' + 'ng' + '@g' + 'ma' + 'il' + '.c' +
     'om';
 
+    
+
     return(
         <div 
-            style={{backgroundImage: "url(" + Background + ")"}}
+            style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(" + Background + ")"}}
             className="about-page-container">
+
             <div className="about-page-headshot-container">
                 <img className="about-page-portrait" src={Portrait}/>
             </div>
             <div className="about-page-info-container">
+                <div className="about-page-title-container">
+                    <h1 className="about-page-title">Hi, I'm Cam!</h1>
+                </div>
                 <div className="about-page-info">
-                    <h1>Hi, I'm Cam!</h1>
                     <p>{aboutMe1}</p>
                     <br></br>
                     <p>{aboutMe2}</p>
                     <br></br>
-                    <MultiColouredText text={["Happy", "Coding!"]} />
+                    <div className="about-page-info-footer">
+                        <MultiColouredText 
+                            text={["H", "A", "P", "P", "Y", " C", "O", "D", "I", 
+                                "N", "G", "!"]} />
+                        <div className="about-page-links">
+                            <a href="https://github.com/cammcding">
+                                <img 
+                                    className="about-page-link-logo"
+                                    id="github-link" 
+                                    src={GithubLogo}/>
+                            </a>
+                            <a href={"mai" + "lto:" + eml}>
+                                <img 
+                                    id={"mai" + "l-l" + "ink"}
+                                    className="about-page-link-logo" 
+                                    src={EmailLogo}/>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
-                <div className="about-page-links">
-                    <a href="https://github.com/cammcding">
-                        <img className="about-page-link-logo" src={GithubLogo}/>
-                    </a>
-                    <a href={"mai" + "lto:" + eml}>
-                        <img className="about-page-link-logo" src={EmailLogo}/>
-                    </a>
-                </div>
+                
             </div>
         </div>
     );

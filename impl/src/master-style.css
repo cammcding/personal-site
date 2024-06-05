@@ -91,7 +91,6 @@ body {
     margin: auto;
     color: white;
     font-family:  BoldCustom, Helvetica, sans-serif;
-    
     min-width: fit-content;
     text-align: center;
 }
@@ -582,13 +581,98 @@ span:nth-child(4n+4).general-multi-coloured-text {
 /* ============ About Page ============ */
 
 .about-page-container {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* NOTE: some background image styling was applied directly in 
+             AboutPage.jsx */
     background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.about-page-headshot-container {
+    margin: auto;
 }
 
 .about-page-portrait {
-    height: 30vh;
+    object-fit: cover;
+    height: 300px;
+    width: 200px;
+    border-radius: 50%;
+    border: solid white;
+    border-width: 2px;
+}
+
+.about-page-title {
+    width: fit-content;
+    margin: auto;
+    padding: 0px 10px;
+    font-family: FunCustom, Helvetica, sans-serif;
+    font-size: 80px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.about-page-info-container {
+    margin: auto;
+    width: 60%;
+}
+
+.about-page-info {
+    height: 75%;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: BoldCustom, Helvetica, sans-serif;
+}
+
+.about-page-info .multi-coloured-text-section {
+    text-align: center;
+    font-family: FunCustom, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.about-page-info-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: dotted black;
+    border-width: 3px 0 0 0;
+    padding-top: 10px;
+}
+
+.about-page-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+
+#github-link:hover,
+#mail-link:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.about-page-link-logo {
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+    padding: 1px 5px;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 10px;
 }
 
 /* ============ Error Page ============ */
@@ -596,6 +680,8 @@ span:nth-child(4n+4).general-multi-coloured-text {
 .error-page-container {
     height: 100vh;
     width: 100vw;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .error-page-content-container {
@@ -608,8 +694,9 @@ span:nth-child(4n+4).general-multi-coloured-text {
     width: 60%;
     border: 1px solid black;
     border-radius: 8%;
-    background-color: rgb(205, 205, 205);
-
+    background-color: rgb(244, 244, 244);
+    font-family: BoldCustom, Helvetica, sans-serif;
+    
     /* This centers vertically */
     margin: 0;
     position: absolute;
@@ -622,4 +709,23 @@ span:nth-child(4n+4).general-multi-coloured-text {
 .error-page-content-container > * {
     width: 100%;
     text-align: center;
+}
+
+/* ABOUT PAGE --- Avoiding overlap when screen is small */
+@media only screen and (max-width: 580px) {
+    .about-page-container {
+        flex-wrap: wrap;
+        /* justify-content: center; */
+    }
+    .about-page-headshot-container, .about-page-info-container {
+        margin-top: 10px;
+        margin: auto;
+    }
+    .about-page-portrait {
+        height: 200px;
+        width: 133px;
+    }
+    .about-page-info-container {
+        width: 80%;
+    }
 }
