@@ -140,7 +140,10 @@ body {
     color: var(--theme-green);
 }
 
-.global-navbar-link:hover { cursor: pointer; }
+.global-navbar-link:hover { 
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 /* ============ Home Page Container ============ */
 
