@@ -442,7 +442,7 @@ span:nth-child(4n+4).general-multi-coloured-text {
     width: 90%;
     margin: auto;
     margin-bottom: 10px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .project-card {
@@ -614,6 +614,7 @@ span:nth-child(4n+4).general-multi-coloured-text {
     font-size: 80px;
     text-align: center;
     color: white;
+    border-radius: 20px;
     margin-bottom: 20px;
 }
 
