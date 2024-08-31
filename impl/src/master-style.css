@@ -711,7 +711,7 @@ span:nth-child(4n+4).general-multi-coloured-text {
     text-align: center;
 }
 
-/* ABOUT PAGE --- Avoiding overlap when screen is small */
+/* Avoiding Issues when screen is small */
 @media only screen and (max-width: 580px) {
     .about-page-container {
         flex-wrap: wrap;
@@ -727,5 +727,22 @@ span:nth-child(4n+4).general-multi-coloured-text {
     }
     .about-page-info-container {
         width: 80%;
+    }
+    .global-navbar-link {
+        font-size: 15px;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px;
+        margin: 5px;
+        min-width: fit-content;
+    }
+    .global-navbar-left {
+        min-width: 40%;
+        width: 40%;
+        margin-left: -40px;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        border-radius: 50px;
     }
 }
