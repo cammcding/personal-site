@@ -745,4 +745,22 @@ span:nth-child(4n+4).general-multi-coloured-text {
         background-color: black;
         border-radius: 50px;
     }
+    .projects-page-top-text-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .projects-page-title {
+        font-family: FunCustom, Helvetica, sans-serif;
+        font-size: 50px;
+        margin: auto;
+        text-align: center;
+        border: solid black;
+        border-width: 0 0 0 0;
+    }
+    .projects-page-info {
+        font-family: BoldCustom, Helvetica, sans-serif;
+        margin: auto;
+        margin-left: 0px;
+        padding: 10px;
+    }
 }
